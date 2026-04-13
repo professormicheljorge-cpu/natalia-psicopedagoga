@@ -6,7 +6,7 @@
 <title>Natália Bomfim de Oliveira · Psicopedagogia</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-/* ... Mantive seu CSS original para não perder o design ... */
+/* ... Mantive seu CSS original com pequenos ajustes na logo ... */
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
   --blush:#f9eef1;
@@ -33,19 +33,27 @@ nav{
   border-bottom:1px solid rgba(242,196,207,.45);
 }
 .nav-logo-wrap{display:flex;align-items:center;gap:14px;padding:14px 0;text-decoration:none}
-.nav-logo{width:46px;height:46px;border-radius:50%;object-fit:cover;border:2px solid var(--rose)}
-.nav-brand{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--wine)}
+
+/* Ajuste na classe da logo para melhor nitidez */
+.nav-logo{
+  width:52px; /* Aumentei levemente para destacar os detalhes do novo design */
+  height:52px;
+  object-fit:contain; /* Garante que o círculo do logo não seja cortado */
+  transition: transform 0.3s ease;
+}
+.nav-logo:hover {transform: scale(1.05);}
+
+.nav-brand{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--wine);display:flex;flex-direction:column;}
+.nav-brand small{font-size:0.7rem; letter-spacing: 1px; color: var(--muted); font-weight: 400;}
+
 .nav-links a{font-size:.68rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:10px 16px;border-radius:30px;transition:all .25s}
 .nav-links a:hover{color:var(--wine);background:rgba(242,196,207,.25)}
 
-/* Adicionei estilo para as seções */
 .section-wrap{max-width:1100px;margin:0 auto;padding:96px 56px}
 .sobre-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
 .sobre-photo{width:100%;max-width:380px;height:460px;object-fit:cover;border-radius:28px;box-shadow:0 24px 64px rgba(139,58,82,0.18)}
 .sobre-deco-card{position:absolute;bottom:-24px;right:-24px;background:#fff;border-radius:20px;padding:20px 24px;box-shadow:0 12px 36px rgba(139,58,82,0.15);border:1px solid rgba(242,196,207,0.4)}
 .sobre-deco-card .big-num{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:600;color:var(--wine);line-height:1}
-
-/* Hero, Footer e outros estilos continuam aqui... */
 </style>
 </head>
 <body>
@@ -55,21 +63,22 @@ nav{
 
 <nav id="mainNav">
   <a class="nav-logo-wrap" href="#">
-    <img class="nav-logo" src="logo.nbo.png" alt="Logo">
+    <img class="nav-logo" src="logo_redondo.png" alt="Logo Natália Bomfim">
     <div class="nav-brand">Natália Bomfim<small>Psicopedagogia</small></div>
   </a>
   <div class="nav-links">
     <a href="#sobre">Sobre</a>
     <a href="#servicos">Serviços</a>
-    <a href="index.html">Blog</a> <a href="#contato" class="nav-cta">Agendar Consulta</a>
+    <a href="index.html">Blog</a> 
+    <a href="#contato" class="nav-cta" style="background: var(--rose); color: var(--wine); padding: 10px 20px; border-radius: 30px; font-weight: 600;">Agendar Consulta</a>
   </div>
 </nav>
 
-<section id="sobre" class="sobre-section">
+<section id="sobre" class="sobre-section" style="padding-top: 120px;">
   <div class="section-wrap">
     <div class="sobre-grid">
       <div class="sobre-img-col">
-        <div class="sobre-photo-frame">
+        <div class="sobre-photo-frame" style="position: relative;">
           <img src="foto-perfil.jpg" alt="Natália Bomfim" class="sobre-photo">
           <div class="sobre-deco-card">
             <div class="big-num">3+</div> 
@@ -78,16 +87,15 @@ nav{
         </div>
       </div>
       <div class="sobre-content">
-        <span class="section-eyebrow">Minha Trajetória</span>
-        <h2 class="section-title">Dedicação ao <em>Desenvolvimento</em> Infantil</h2>
-        <p class="sobre-text">Sou psicopedagoga apaixonada por desvendar os caminhos da aprendizagem...</p>
+        <span class="section-eyebrow" style="text-transform: uppercase; font-size: 0.7rem; letter-spacing: 2px; color: var(--dusty);">Minha Trajetória</span>
+        <h2 class="section-title" style="font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; color: var(--wine); margin: 15px 0;">Dedicação ao <em>Desenvolvimento</em> Infantil</h2>
+        <p class="sobre-text" style="line-height: 1.8; color: var(--muted);">Sou psicopedagoga apaixonada por desvendar os caminhos da aprendizagem...</p>
       </div>
     </div>
   </div>
 </section>
 
 <script>
-// Lógica do cursor e animações
 const cursor = document.getElementById('cursor');
 const cursorRing = document.getElementById('cursorRing');
 document.addEventListener('mousemove', (e) => {
