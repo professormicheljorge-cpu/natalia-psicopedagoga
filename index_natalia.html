@@ -6,7 +6,6 @@
 <title>Natália Bomfim de Oliveira · Psicopedagogia</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-/* ... Mantive seu CSS original com pequenos ajustes na logo ... */
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
   --blush:#f9eef1;
@@ -34,11 +33,10 @@ nav{
 }
 .nav-logo-wrap{display:flex;align-items:center;gap:14px;padding:14px 0;text-decoration:none}
 
-/* Ajuste na classe da logo para melhor nitidez */
 .nav-logo{
-  width:52px; /* Aumentei levemente para destacar os detalhes do novo design */
+  width:52px;
   height:52px;
-  object-fit:contain; /* Garante que o círculo do logo não seja cortado */
+  object-fit:contain;
   transition: transform 0.3s ease;
 }
 .nav-logo:hover {transform: scale(1.05);}
@@ -49,11 +47,32 @@ nav{
 .nav-links a{font-size:.68rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:10px 16px;border-radius:30px;transition:all .25s}
 .nav-links a:hover{color:var(--wine);background:rgba(242,196,207,.25)}
 
-.section-wrap{max-width:1100px;margin:0 auto;padding:96px 56px}
-.sobre-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-.sobre-photo{width:100%;max-width:380px;height:460px;object-fit:cover;border-radius:28px;box-shadow:0 24px 64px rgba(139,58,82,0.18)}
-.sobre-deco-card{position:absolute;bottom:-24px;right:-24px;background:#fff;border-radius:20px;padding:20px 24px;box-shadow:0 12px 36px rgba(139,58,82,0.15);border:1px solid rgba(242,196,207,0.4)}
-.sobre-deco-card .big-num{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:600;color:var(--wine);line-height:1}
+.section-wrap{max-width:800px;margin:0 auto;padding:120px 56px; text-align: center;}
+.sobre-content{display: flex; flex-direction: column; align-items: center;}
+
+.section-eyebrow {
+    text-transform: uppercase; 
+    font-size: 0.7rem; 
+    letter-spacing: 2px; 
+    color: var(--dusty);
+    display: block;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    font-family: 'Cormorant Garamond', serif; 
+    font-size: 2.8rem; 
+    color: var(--wine); 
+    margin-bottom: 25px;
+    line-height: 1.2;
+}
+
+.sobre-text {
+    line-height: 1.8; 
+    color: var(--muted);
+    font-size: 1.1rem;
+    max-width: 650px;
+}
 </style>
 </head>
 <body>
@@ -74,23 +93,14 @@ nav{
   </div>
 </nav>
 
-<section id="sobre" class="sobre-section" style="padding-top: 120px;">
+<section id="sobre" class="sobre-section">
   <div class="section-wrap">
-    <div class="sobre-grid">
-      <div class="sobre-img-col">
-        <div class="sobre-photo-frame" style="position: relative;">
-          <img src="foto-perfil.jpg" alt="Natália Bomfim" class="sobre-photo">
-          <div class="sobre-deco-card">
-            <div class="big-num">3+</div> 
-            <div class="small-txt">Anos de Experiência</div>
-          </div>
-        </div>
-      </div>
-      <div class="sobre-content">
-        <span class="section-eyebrow" style="text-transform: uppercase; font-size: 0.7rem; letter-spacing: 2px; color: var(--dusty);">Minha Trajetória</span>
-        <h2 class="section-title" style="font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; color: var(--wine); margin: 15px 0;">Dedicação ao <em>Desenvolvimento</em> Infantil</h2>
-        <p class="sobre-text" style="line-height: 1.8; color: var(--muted);">Sou psicopedagoga apaixonada por desvendar os caminhos da aprendizagem...</p>
-      </div>
+    <div class="sobre-content">
+      <span class="section-eyebrow">Minha Trajetória</span>
+      <h2 class="section-title">Dedicação ao <em>Desenvolvimento</em> Infantil</h2>
+      <p class="sobre-text">
+        Com 3 anos de experiência, sou uma psicopedagoga apaixonada por desvendar os caminhos da aprendizagem e auxiliar cada criança a alcançar seu potencial máximo através de estratégias personalizadas e acolhimento especializado.
+      </p>
     </div>
   </div>
 </section>
