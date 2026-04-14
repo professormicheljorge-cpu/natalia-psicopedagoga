@@ -1,124 +1,96 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Natália Bomfim de Oliveira · Psicopedagoga</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-:root{
-  --blush:#f9eef1;
-  --rose:#f2c4cf;
-  --dusty:#c9849a;
-  --wine:#8b3a52;
-  --deep:#5c1f32;
-  --cream:#fffbfc;
-  --text:#3a2530;
-  --muted:#8a6670;
-}
-html{scroll-behavior:smooth}
-body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);overflow-x:hidden;cursor:none}
-
-/* ─── CURSOR ─── */
-.cursor{position:fixed;width:10px;height:10px;background:var(--wine);border-radius:50%;pointer-events:none;z-index:9999;transition:transform .15s ease;mix-blend-mode:multiply}
-.cursor-ring{position:fixed;width:36px;height:36px;border:1.5px solid var(--dusty);border-radius:50%;pointer-events:none;z-index:9998;transition:all .2s ease;opacity:.6}
-
-/* ─── GRAIN ─── */
-body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:1;opacity:.4}
-
-/* ─── PETALS ─── */
-.petal-bg{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
-.petal{position:absolute;opacity:0;animation:floatPetal linear infinite}
-@keyframes floatPetal{0%{transform:translateY(-60px) rotate(0deg) scale(.6);opacity:0}10%{opacity:.35}90%{opacity:.2}100%{transform:translateY(110vh) rotate(360deg) scale(1);opacity:0}}
-
-/* ─── READ BAR ─── */
-.read-bar{position:fixed;top:0;left:0;height:3px;z-index:300;background:linear-gradient(90deg,var(--rose),var(--dusty),var(--wine));width:0%;transition:width .1s linear;box-shadow:0 0 8px rgba(139,58,82,.4)}
-
-/* ─── NAV ─── */
-nav{
-  position:fixed;top:0;left:0;right:0;z-index:200;
-  display:flex;align-items:center;justify-content:space-between;
-  padding:0 56px;
-  background:rgba(255,251,252,.92);
-  backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
-  border-bottom:1px solid rgba(242,196,207,.45);
-  transition:box-shadow .3s;
-}
-nav.scrolled{box-shadow:0 4px 24px rgba(139,58,82,.08)}
-.nav-logo-wrap{display:flex;align-items:center;gap:14px;padding:14px 0;text-decoration:none}
-.nav-logo{width:52px;height:52px;object-fit:contain;transition:transform .4s}
-.nav-logo:hover{transform:rotate(-5deg) scale(1.08)}
-.nav-brand{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--wine);line-height:1.2}
-.nav-brand small{display:block;font-family:'Jost',sans-serif;font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:400}
-.nav-links{display:flex;align-items:center;gap:4px}
-.nav-links a{font-size:.68rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:10px 16px;border-radius:30px;transition:all .25s;position:relative}
-.nav-links a:hover{color:var(--wine);background:rgba(242,196,207,.25)}
-.nav-cta{background:linear-gradient(135deg,var(--wine),#a8465c)!important;color:#fff!important;padding:9px 22px!important;box-shadow:0 3px 12px rgba(139,58,82,.25)!important}
-
-/* ─── SOBRE (MODIFICADO) ─── */
-.sobre-section{background:#fff; text-align: center;}
-.section-wrap{max-width:850px;margin:0 auto;padding:120px 56px}
-.sobre-content{display: flex; flex-direction: column; align-items: center;}
-.sobre-text{font-size:1.1rem;font-weight:300;color:#5a3f48;line-height:1.95;margin-bottom:24px}
-.section-eyebrow{display:inline-flex;align-items:center;gap:7px;background:rgba(139,58,82,.07);color:var(--wine);font-size:.62rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;padding:6px 16px;border-radius:30px;border:1px solid rgba(242,196,207,.6);margin-bottom:18px}
-.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,4vw,3.5rem);font-weight:600;color:var(--deep);line-height:1.2;margin-bottom:24px}
-
-/* ... Mantive o restante dos seus estilos originais abaixo para garantir o funcionamento total ... */
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Natalia Bomfim · Psicopedagoga Clínica</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<div class="read-bar" id="readBar"></div>
-<div class="cursor" id="cursor"></div>
-<div class="cursor-ring" id="cursorRing"></div>
-<div class="petal-bg" id="petalBg"></div>
+  <header id="header">
+    <nav class="container">
+      <a href="#" class="logo">Natalia<span>Bomfim</span></a>
+      <ul class="nav-links">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#agendamento" class="btn-nav">Agendar</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<nav id="mainNav">
-  <a class="nav-logo-wrap" href="#">
-    <img class="nav-logo" src="logo_redondo.png" alt="Logo Natália Bomfim">
-    <div class="nav-brand">Natália Bomfim<small>Psicopedagogia</small></div>
-  </a>
-  <div class="nav-links">
-    <a href="#sobre">Sobre</a>
-    <a href="#servicos">Serviços</a>
-    <a href="index.html">Blog</a> 
-    <a href="#contato" class="nav-cta">Agendar Consulta</a>
-  </div>
-</nav>
-
-<section id="sobre" class="sobre-section">
-  <div class="section-wrap">
-    <div class="sobre-content">
-      <span class="section-eyebrow">Minha Trajetória</span>
-      <h2 class="section-title">Dedicação ao <em>Desenvolvimento</em> Infantil</h2>
-      <p class="sobre-text">
-        Com 3+ anos de experiência dedicada à clínica e ao ambiente institucional, sou psicopedagoga apaixonada por desvendar os caminhos da aprendizagem. Meu trabalho foca em identificar e superar barreiras educacionais, utilizando métodos personalizados para cada criança e adolescente.
-      </p>
-      <p class="sobre-text">
-        Acredito em um atendimento humanizado e baseado em evidências, onde o acolhimento da família e o suporte à escola caminham juntos para garantir o florescer de cada potencial.
-      </p>
+  <section class="hero">
+    <div class="container" data-aos="fade-up" data-aos-duration="1200">
+      <span class="tag">Psicopedagoga Clínica</span>
+      <h1>Apoio delicado para o <br><em>aprendizado florescer</em></h1>
+      <p>Um espaço de acolhimento focado no desenvolvimento integral de crianças, adolescentes e adultos.</p>
+      <div class="hero-btns">
+        <a href="#agendamento" class="btn-primary">Agendar consulta</a>
+        <a href="#sobre" class="btn-outline">Conheça o trabalho</a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<script>
-// Lógica do cursor
-const cursor = document.getElementById('cursor');
-const cursorRing = document.getElementById('cursorRing');
-document.addEventListener('mousemove', (e) => {
-    cursor.style.transform = `translate(${e.clientX - 5}px, ${e.clientY - 5}px)`;
-    cursorRing.style.transform = `translate(${e.clientX - 18}px, ${e.clientY - 18}px)`;
-});
+  <section id="sobre" class="section">
+    <div class="container about-grid">
+      <div class="about-photo" data-aos="reveal-right">
+        <div class="photo-placeholder">NB</div>
+      </div>
+      <div class="about-text" data-aos="fade-left">
+        <span class="section-label">Sobre mim</span>
+        <h2>Cuidar do aprender é cuidar do ser.</h2>
+        <p>Sou especialista em Neuropsicologia Educacional, dedicada a entender os caminhos únicos que cada mente percorre para absorver o mundo.</p>
+        <div class="credentials">
+          <div class="credential"><strong>+5</strong><span>anos de atuação</span></div>
+          <div class="credential"><strong>100%</strong><span>personalizado</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-// Barra de leitura
-window.addEventListener('scroll', () => {
-  const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  const scrolled = (winScroll / height) * 100;
-  document.getElementById("readBar").style.width = scrolled + "%";
-});
-</script>
+  <section id="servicos" class="section section-alt">
+    <div class="container">
+      <div class="center-text" data-aos="fade-up">
+        <span class="section-label">Especialidades</span>
+        <h2>Como posso te acompanhar</h2>
+      </div>
+      <div class="services-grid">
+        <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-icon">✦</div>
+          <h3>Avaliação</h3>
+          <p>Diagnóstico detalhado dos processos cognitivos e emocionais da aprendizagem.</p>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-icon">✦</div>
+          <h3>Intervenção</h3>
+          <p>Acompanhamento individualizado para superar desafios de leitura, escrita e TDAH.</p>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-icon">✦</div>
+          <h3>Orientação</h3>
+          <p>Suporte estratégico para famílias e escolas criarem ambientes facilitadores.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <footer class="section">
+    <div class="container footer-inner">
+      <p>© 2026 Natalia Bomfim · Design Minimalista</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true,
+      duration: 800,
+      easing: 'ease-out-quad'
+    });
+  </script>
 </body>
-</html> 
+</html>
